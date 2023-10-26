@@ -58,3 +58,16 @@ Optimizar la carga de la página para un rendimiento rápido y una experiencia d
 ### Despliegue:
 
 Desplegar la aplicación en un servidor web para que sea accesible en línea.
+
+## Recursos
+
+- Assets: <a href="https://drive.google.com/drive/folders/1xkzqsYcCup6Upz003OieFIQWMf-vxB3I?usp=sharing" target="_blank">Material JS</a>
+- Documentación:
+  - Bootstrap: <a href="https://getbootstrap.com/" target="_blank">Documentación oficial</a>
+  - Font Awesome: <a href="https://fontawesome.com/v4/icons/" target="_blank">Documentación oficial</a>
+  - Json Server: <a href="https://www.npmjs.com/package/json-server">Librería y documentación</a>
+  - Javascript:
+    - ES6: <a href="https://docs.google.com/presentation/d/e/2PACX-1vSbarl0QADBwGlwb5iXdBLk3F3cnLDZJ0cegn-9cYTSPhH0s9PdpU6xCAqlAx9TvGG1qqyKNYGgXzqx/pub?start=false&loop=false&delayms=3000&slide=id.gdd39d56ed4_0_5">Diapositiva</a>
+    - Promesas: <a href="https://universe.rollingcodeschool.com/live/videos/63ed0b55a798367faa942b16?tab=2&video=648fcf19c7544e94fc7bf441" target="_blank">RollingTips</a>
+    - Fetch: <a href="https://universe.rollingcodeschool.com/live/videos/63ed0b55a798367faa942b16?tab=2&video=648fcf7cc7544e94fc7c4ae8" target="_blank">RollingTips</a>
+    - Async await: <a href="https://universe.rollingcodeschool.com/live/videos/63ed0b55a798367faa942b16?tab=2&video=648fd03dc7544e94fc7cf321" target="_blank">RollingTips</a>
