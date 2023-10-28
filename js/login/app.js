@@ -1,6 +1,4 @@
 'use strict'
-
-import { validarContrasenia, validarEmail } from "../register/validators.js";
 import { User } from "./User.js";
 
 
