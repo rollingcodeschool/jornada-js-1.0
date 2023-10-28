@@ -7,7 +7,7 @@ div.classList.add("card");
 
 
 const title = document.createElement('h5');
-title.classList.add('title')
+title.classList.add('title', 'text-center', 'fs-3')
 title.innerText = talk.title;
 div.appendChild(title);
 
@@ -17,7 +17,7 @@ img.alt = talk.title;
 div.appendChild(img);
 
 const btnVerMas = document.createElement('button');
-btnVerMas.classList.add('btn', 'btn-danger');
+btnVerMas.classList.add('btn', 'btn-danger', 'm-2');
 btnVerMas.innerText=('Ver mas');
 btnVerMas.addEventListener('click', ()=>{
     sessionStorage.setItem('charlaselec', JSON.stringify(talk));

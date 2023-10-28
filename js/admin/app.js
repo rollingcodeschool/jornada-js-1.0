@@ -9,12 +9,18 @@ const hourChat = document.getElementById("hour");
 const speaker = document.getElementById("speaker");
 const image = document.getElementById("image");
 const formsChat = document.getElementById('formsChat');
+const description = document.getElementById("description")
 
 
 title.addEventListener("blur", (e) => {
     const value = e.target.value;
   
     validateTitle(value, title);
+  });
+  description.addEventListener("blur", (e) => {
+    const value = e.target.value;
+  
+    validateTitle(value, description);
   });
 
   hourChat.addEventListener("blur", (e) => {
@@ -42,15 +48,16 @@ title.addEventListener("blur", (e) => {
     const hour = hourChat.value;
     const spekearChat = speaker.value;
     const imageChat = image.value;
+    const desc = description.value;
     console.log(titleChat)
          
     if(validateTitle(titleChat,title) && validateHourChat(hour,hourChat) && validateSpaker(spekearChat,speaker) && validateImage(imageChat,image) ){
 
         const isEditing = isEditingChat()
         if(isEditing){
-            isEditingTalks(titleChat,hour,spekearChat,imageChat)
+            isEditingTalks(titleChat,hour,spekearChat,imageChat,)
         }else{
-            save(titleChat,hour,spekearChat,imageChat)
+            save(titleChat,hour,spekearChat,imageChat,desc)
         } loadTable();
         formsChat.reset();
     }

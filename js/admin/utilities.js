@@ -105,7 +105,7 @@ export const editingChats = (id)=>{
     const hourChat = document.getElementById("hour");
     const speaker = document.getElementById("speaker");
     const image = document.getElementById("image");
-    const formsChat = document.getElementById('formsChat');
+    
     // 4. Cargar los datos en el formulario
   
     title.value = talkSelect.title;

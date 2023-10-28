@@ -1,23 +1,29 @@
-import { getTalksLS } from "../chatLS"
+// import { getTalksLS } from "../chatLS"
 
-const createTalkDescription = () => {
-    const mainContainer = document.getElementById('main-content');
-    const titleTalk = document.getElementById('title-talk');
-    const imgTalk = document.getElementById('img-talk');
-    const speaker = document.getElementById('talk-speaker');
-    const description = document.getElementById('talk-description');
+const createTalkDescription = (talk) => {
+console.log(talk);
+const container = document.getElementById('detail-container');
 
-    titleTalk.innerText = talk.title;
-    imgTalk.src = talk.image;
-    imgTalk.classList.add('img-detail');
-    speakerTalk.innerText = talk.speaker;
-    description.innerText = talk.description;
+const title = document.createElement('h2');
+title.innerText = talk.title;
 
+const img = document.createElement('img');
+title.innerText = talk.image;
+
+const speaker = document.createElement('h2');
+speaker.innerText = talk.speaker;
+
+const description = document.createElement('h2');
+title.innerText = talk.description;
+
+container.appendChild(title);
+container.appendChild(img);
+container.appendChild(speaker);
+container.appendChild(description);
 }
 
-document.addEventListene("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
     const talk = sessionStorage.getItem('charlaselec');
-
     if(talk){
         const talks = JSON.parse(talk)
         createTalkDescription(talks);
