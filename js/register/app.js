@@ -1,6 +1,6 @@
 'use strict'
 
-import { añadirContacto, editUser } from "./abm.js";
+import { añadirContacto } from "./abm.js";
 import { validarContrasenia, validarEmail, validarNombre } from "./validators.js";
 
 
