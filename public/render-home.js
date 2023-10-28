@@ -3,15 +3,16 @@ let speech = '';
 console.log(data);
 data[1].forEach((charla)=>{
 speech = speech + `
-       <article class='card m-4 bg-danger'>
-         <figure class=''>
-           <img class='img-fluid w-100' src="${charla.imagen}" alt="">
-         </figure>
-         
-         <h3>${charla.título}</h3>
-         <h3>${charla.descripción}</h3>
-         <h3>${charla.orador}</h3>
-     </article>
+<article class="col">
+<a href='detalle/${charla.id}'>
+<div class="card" style="width: 18rem;">
+<img src=${charla.imagen} class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">${charla.título}</h5>  
+</div>
+</div>
+</a>
+</article>
     `          
 
 })
