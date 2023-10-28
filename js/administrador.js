@@ -1,5 +1,16 @@
 import {TitlePpal , bodyUser, bodyEvent , createTable, loadEvents, loadUser} from '../helpers/administradorHelpers.js'; 
+import navbar from "./navBar.js";
+import myFooter from "./footer.js";
 const location = window.location.pathname; 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  navbar();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  myFooter();
+}); 
 
 if(location.includes("administrador.html")){
     const containerEvent = document.querySelector(".container-administrador"); 
