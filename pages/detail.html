@@ -9,20 +9,22 @@
     />
     <meta name="author" content="Los súbditos de Eze" />
     <meta name="keywords" content="charlas, tecnología" />
+    <title>Rolling Conferencias</title>
+
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
-  /> 
-  <link rel="stylesheet" href="/style.css" />
+  />
+
+    <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/home.css" />
-    <title>Rolling Conferencias</title>
-</head>
+    <link rel="stylesheet" href="./styles/details.css" />
+  </head>
   <body class="bg-dark">
     <header class="fixed-top">
-      <navbar
-
+      <nav
         id="home-navbar"
         class="navbar navbar-expand-md navbar-dark text-dark"
       >
@@ -30,7 +32,7 @@
           <a class="navbar-brand" href="#">
             <img
               src="./assets/Logos/Rolling Code/PNG/RC - 2.png"
-              alt="RollingCode logo oficial"
+              alt="RollingCode logo"
               width="200px"
             />
           </a>
@@ -83,20 +85,21 @@
             </div>
           </div>
         </div>
-      </navbar>
+      </nav>
     </header>
-    <main class="container">
-      <!--En este section se encuentran los 2 primeros articulos que se ven mas grandes-->
-      <section>
-        <article
-        id="articulo"
-        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
-    >
-        <div class="col" id="container">
-            
+    <main>
+      <section id="main-content" class="position-relative">
+        <article class="container p-4">
+          <h1 id="talk-title"></h1>
+          <img
+            id="img-talk"
+          ></img>
+          <h3 id="talk-speaker"></h3>
+          <p id="talk-description"></p>
         </div>
-    
-  </main>
+      </section>
+
+    </main>
     <footer class="container-xl bg-dark">
       <div class="d-flex">
         <a href="#" class="me-3 ms-3 text-light"
@@ -251,6 +254,7 @@
       </section>
       <p class="mb-0 text-secondary mt-2">&copy; Rolling Code</p>
     </footer>
+    <script type="module" src="/main.js"></script>
     <script
     defer
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -262,7 +266,5 @@
     src="https://kit.fontawesome.com/10942c11e8.js"
     crossorigin="anonymous"
   ></script>
-
-  <script type="module" src="./js/home/home.js"></script>
   </body>
 </html>

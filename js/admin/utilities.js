@@ -80,65 +80,6 @@ export const addCardTalks = (talk) => {
   
     card.appendChild(cardBody);
   };
-/*export const rowChat = (talks, index) => {
-     console.log("chau")
-  const tbody = document.getElementById("tbodyChat");
-  const tr = document.createElement("tr");
-  tr.classList.add("text-white");
-
-  const tdIndex = document.createElement("td");
-  tdIndex.innerText = index;
-  tr.appendChild(tdIndex);
-
-  const tdTitle = document.createElement("td");
-  tdTitle.innerText = talks.title;
-  tr.appendChild(tdTitle);
-
-  const tdHour = document.createElement("td");
-  tdHour.innerText = talks.hour;
-  tr.appendChild(tdHour);
-
-  const tdImage = document.createElement("td");
-  const img = document.createElement("img");
-  img.src = talks.image;
-  img.alt = talks.title;
-  tdImage.appendChild(img);
-
-  const tdSpekear = document.createElement("td");
-  tdSpekear.innerText = talks.speaker;
-  tr.appendChild(tdSpekear);
-
-  const tdBotones = document.createElement("td");
-  const btnEditar = document.createElement("button");
-  const btnEliminar = document.createElement("button");
-
-  const iconEditar = document.createElement("i");
-  const iconEliminar = document.createElement("i");
-
-  iconEditar.classList.add("fa-solid", "fa-pencil");
-  iconEliminar.classList.add("fa-solid", "fa-trash-can");
-
-  btnEditar.type = "button";
-  btnEliminar.type = "button";
-
-  btnEditar.classList.add("btn", "btn-primary", "btn-sm");
-  btnEliminar.classList.add("btn", "btn-danger", "btn-sm");
-
-  btnEditar.appendChild(iconEditar);
-  btnEliminar.appendChild(iconEliminar);
-
-  tdBotones.appendChild(btnEditar);
-  tdBotones.appendChild(btnEliminar);
-  tdBotones.appendChild(btnDestacar);
-  tr.appendChild(tdBotones);
-
-  btnEditar.onclick = () => {
-    isEditingChat(pelicula.codigo);
-  };
-
-  tbody.appendChild(tr);
-};*/
-
 
 export const loadTable = ()=>{
     const talk = getTalksLS();
