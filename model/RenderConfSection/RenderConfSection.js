@@ -20,6 +20,7 @@ class RenderConfSection {
       <h4>${this.orador}</h4>
     </div>
     <div class="confInfo">
+      <h3>${this.titulo}</h3>
       <p>${this.descripción}</p>
       <div class="spanContainer">
         <span class="spanHour">${this.hora}</span>
