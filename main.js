@@ -1,5 +1,5 @@
-import myFooter from "../components/footer.js";
-import navbar from "../components/navbar.js";
+import myFooter from "./js/footer.js";
+import navbar from "./js/navBar.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
