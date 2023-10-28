@@ -8,11 +8,12 @@ const navbar = () => {
   return (header.innerHTML = `
   <nav class="navbar navbar-total navbar-expand-lg bg-body-dark navbar-dark">
   <div class="container-fluid">
-    <img src="../assets/RC - Studio - 2.png" class="logo-navbar"/>
+    <img src="../assets/logo2.png" class="logo-navbar"/>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 ${adminLogueado || usuarioLogueado
       ? `
