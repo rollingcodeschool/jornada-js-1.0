@@ -1,7 +1,7 @@
 'use strict'
 
-import { añadirContacto } from "./abmReg.js";
-import { validarContrasenia, validarEmail, validarNombre } from "./validatorsReg.js";
+import { añadirContacto } from "./abm.js";
+import { validarContrasenia, validarEmail, validarNombre } from "./validators.js";
 
 
 const form = document.getElementById('form-contacto');

@@ -1,11 +1,11 @@
 'use strict'
 
-import { obtenerContactosDeLS, ordenarLista } from "./utilsReg";
+import { obtenerContactosDeLS, ordenarLista } from "./utilsReg.js";
 
 
 export const generateRandomId = () => {
-    return self.crypto.randomUUID();
-    };
+ return self.crypto.randomUUID();
+};
 
 export const agregarContactoALS = (nuevoContacto) => {
 const contactos = ordenarLista(obtenerContactosDeLS());
