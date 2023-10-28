@@ -1,6 +1,6 @@
 {
     "usuarios": [
-      { "id": 1, "nombre": "json-server", "correo": "typicode","email":"usuario@user.com", "avatar":"https://w7.pngwing.com/pngs/254/985/png-transparent-actor-avatar-people-person-profile-user-voice-user-avatar-icon.png" }
+      { "id": 1, "nombre": "json-server", "password": "typicode","email":"usuario@user.com", "avatar":"https://w7.pngwing.com/pngs/254/985/png-transparent-actor-avatar-people-person-profile-user-voice-user-avatar-icon.png" }
     ],
     "charlas": [
         {
