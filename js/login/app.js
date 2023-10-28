@@ -7,7 +7,7 @@ import { User, UserWithoutContrasenia } from "./User.js";
 const isLogged = JSON.parse(sessionStorage.getItem('isLogged'));
 if (isLogged) {
 
-window.location.href = './admin/admin.html';
+window.location.href = '../../index.html';
 }
 
 

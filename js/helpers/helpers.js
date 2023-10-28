@@ -12,4 +12,3 @@ const contactos = ordenarLista(obtenerContactosDeLS());
 contactos.push(nuevoContacto);
 localStorage.setItem('contactos',JSON.stringify(contactos));
 }
-
