@@ -1,4 +1,5 @@
-
+const adminLogueado = JSON.parse(localStorage.getItem('adminLogueado')) || false;
+const usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')) || false;
 
 const header = document.querySelector("header");
 
@@ -14,64 +15,55 @@ const navbar = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
   
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-                 <a class="nav-link active text-white" aria-current="page" href="../index.html">Inicio</a>
-              </li>
-                ${
-                  user
-                    ? `
+                ${adminLogueado || usuarioLogueado
+      ? `
                     <li class="nav-item">
-                      <a class="nav-link text-white" href="../index.html">${user.userName}</a>
+                      ${user}
                     </li>`
-                    : `
+      : `
                     <li class="nav-item">
-                      <a class="nav-link text-white" href="../pages/login.html">Iniciar Sesión</a>
+                      <button class="btn btn-primary w-md-100 mb-md-3" href="../pages/login.html">Iniciar Sesión</button>
                     </li>
                 `
-                }
-                ${
-                  user
-                    ? ""
-                    : `
+    }
+                ${adminLogueado || usuarioLogueado
+      ? ""
+      : `
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="../pages/register.html">Regístrate</a>
+                    <button class="btn btn-danger ms-lg-3 w-md-100" href="../pages/register.html">Regístrate</button>
                   </li>
                 `
-                }
-                ${
-                  user?.role === "ADMIN"
-                    ? `
+    }
+                ${adminLogueado
+      ? `
                     <li class="nav-item">
                       <a class="nav-link text-white" href="../pages/administrador.html">Panel de Admin.</a>
                     </li>
                     `
-                    : ""
-                }
-                ${
-                  user?.role === "USER"
-                    ? `
+      : ""
+    }
+                ${usuarioLogueado
+      ? `
                     <li class="nav-item">
                       <a class="nav-link text-white" href="../index.html"></a>
                     </li>
                     `
-                    : ""
-                }
-                ${
-                  user
-                    ? `
+      : ""
+    }
+                ${adminLogueado || usuarioLogueado
+      ? `
                     <li class="nav-item">
                       <button class="btn text-white justify-content-md-end" id='closeSession' onclick='localStorage.clear(), window.location.reload()'>Cerrar Sesión</button>
                     </li>
                     `
-                    : ""
-                }
+      : ""
+    }
      </ul>
         
     </div>
   </div>
 </nav>
 `);
- };
-
+};
 
 export default navbar;
