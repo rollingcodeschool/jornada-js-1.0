@@ -7,7 +7,7 @@ import { User, UserWithoutContrasenia } from "./User.js";
 const isLogged = JSON.parse(sessionStorage.getItem('isLogged'));
 if (isLogged) {
 
-window.location.href = '../../index.html';
+window.location.href = './admin/admin.html';
 }
 
 
@@ -45,7 +45,7 @@ formLogin.addEventListener('submit', (e) => {  e.preventDefault();
       swal.fire({
         title: 'BIENVENIDO',
         timer: 2000,
-        imageUrl: '../assets/logo-blanco.png',
+        imageUrl: '../assets/logos/logo-blanco.png',
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'foto bienvenida rolling code school',
@@ -54,7 +54,7 @@ formLogin.addEventListener('submit', (e) => {  e.preventDefault();
         color: '#f9f9f9',
       })
       .then(() => {
-        window.location.href = '../../index.html';
+        window.location.href = '../../pages/home.html';
     });
     } else {
       credentialsAlert.classList.remove('d-none');
