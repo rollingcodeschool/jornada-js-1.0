@@ -12,8 +12,9 @@ export class User {
 }
 
 export class UserWithoutContrasenia {
-    constructor(email){
+    constructor(email, contrasenia){
         this.id = generateRandomId();
         this.email = email;
+        this.contrasenia = contrasenia;
     }
 }
