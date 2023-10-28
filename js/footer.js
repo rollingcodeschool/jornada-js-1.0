@@ -2,7 +2,7 @@ const footer = document.querySelector("footer");
 
 const myFooter = () => {
   const user = JSON.parse(localStorage.getItem("userLog")) || undefined;
-  return (footer.innerHTML = `<section class="container-fluid p-3 mt-5 footer bg-dark">
+  return (footer.innerHTML = `<section class="container-fluid mt-5 footer bg-dark">
   <article class="row justify-content-around" id="cuerpoFooter">
     <aside class="col-xl-3 col-sm-3 col-md-3">
       <p class="h5 text-white">Rolling Conf</p>
@@ -12,14 +12,7 @@ const myFooter = () => {
         <li>Email: rollingcodeschool@gmail.com</li>
       </ul>
     </aside>
-    <aside class="col-xl-3 col-sm-3 col-md-3">
-      <p class="h5 text-white">Navegación</p>
-      <ul>
-        <li><a href="#">Quienes Somos</a></li>
-        <li><a href="#">Contactanos</a></li>
-        <li><a href="#">Nuestra Historia</a></li>
-      </ul>
-    </aside>
+   
     <aside class="col-xl-3 col-sm-3 col-md-3">
       <p class="h5 text-white">Legal</p>
       <ul>
