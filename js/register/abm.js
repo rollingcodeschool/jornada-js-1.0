@@ -14,5 +14,4 @@ swal.fire({
     icon: 'success',
 
 });
-
-}
+};
