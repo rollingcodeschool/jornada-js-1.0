@@ -39,5 +39,6 @@ registrer.innerText = "Registrarse"
 mainDeatil.append(registrer)
 
 
+const ruta = window.location.pathname
 
 
