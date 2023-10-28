@@ -1,3 +1,15 @@
+import myFooter from "../components/footer.js";
+import navbar from "../components/navbar.js";
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  navbar();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  myFooter();
+});
+
 console.log("Hola mundo");
 
 let url = "http://localhost:3000";
@@ -30,3 +42,5 @@ document.querySelector("#btn-talks").addEventListener("click", () => {
     console.log(respuesta);
   });
 });
+
+
