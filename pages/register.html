@@ -12,8 +12,38 @@
     </head>
 <body>
     <header></header>
-    <main></main>
+    <main class="container my-4 text-light col-md-6">
+        <h1>Registro</h1>
+        <hr />
+        <section class="bg-dark p-3 rounded text-light">
+          <form id="form-contacto">
+            <fieldset class="mb-2">
+              <label for="input-nombre" class="form-label">Nombre completo:</label>
+              <input placeholder="Ingrese su nombre" type="text" id="input-nombre" class="form-control" />
+              <div class="invalid-feedback">Ingrese un nombre válido</div>
+            </fieldset>
+            <fieldset class="mb-2">
+              <label for="input-contrasenia" class="form-label">Contraseña:</label>
+              <input placeholder="Ingrese una contraseña" type="password" id="input-contrasenia" class="form-control" />
+              <div class="invalid-feedback">Ingrese una contraseña válida</div>
+            </fieldset>
+            <fieldset class="mb-2">
+              <label for="input-email" class="form-label">Correo electrónico:</label>
+              <input placeholder="Ingrese su correo electrónico" type="text" id="input-email" class="form-control" />
+              <div class="invalid-feedback">
+                Ingrese un correo electrónico válido
+              </div>
+            </fieldset>
+            <div class="text-end mt-3 my-1">
+              <button id="btn-guardar-register" type="submit" class="btn">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
     <footer></footer>
     <script type="module" src="../js/register/app.js"></script>
+    <script type="module" src="../js/register/abm.js"></script>
 </body>
 </html>
