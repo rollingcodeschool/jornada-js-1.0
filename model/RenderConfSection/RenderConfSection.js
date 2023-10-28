@@ -47,13 +47,30 @@ const renderInfoModal = (id) => {
     </div>
   `
   modalfooter.innerHTML = `
-    <p>Deseas registrarte a esta charla?</p>
-    <div>
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-      <button type="button" class="btn btn-primary" onclick="console.log(${id})">Agregar</button>
-    </div>
-    
-  `
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+  `; 
+  const btn = document.createElement("button"); 
+  btn.classList= "btn btn-primary";
+  btn.innerText= "Inscribirse";
+  btn.type = "button"; 
+  btn.addEventListener("click", () => agregarCharla(id))
+  modalfooter.appendChild(btn); 
+}
+function agregarCharla (id){
+  const user = JSON.parse(localStorage.getItem("user")) || null; 
+  if(user  !== null && user?.usuarioValido){
+     const charlas =  dataConf.charlas?.map(charla => {
+      if(charla.id == parseInt(id)){
+          charla.asistentes.push(user)
+      }
+        return charla; 
+      } )
+      alert("Registro Exitoso!"); 
+      localStorage.setItem("charlaInfo" , JSON.stringify(charlas)); 
+  }else{
+    alert("Debe Registrarse para inscribirse!");
+  }
+
 }
 
 // const renderInfoModal = (id) => {

@@ -42,6 +42,12 @@ formulario.addEventListener('submit', (e) => {
     const password = document.getElementById('password').value;
 
     if (email === "administrador@administrador.com" && password === "administrador") {
+        const usuarioValidado = {
+            email: email,
+            password: password, 
+            usuarioValido: true
+        }
+        localStorage.setItem("user",  JSON.stringify(usuarioValidado))
         localStorage.setItem('adminLogueado', true);
         Swal.fire({
             toast: true,
@@ -76,7 +82,11 @@ formulario.addEventListener('submit', (e) => {
         });
         return;
     }
-
+    const usuarioValidado = {
+        ...usuarioValido, 
+        usuarioValido: true
+    }
+    localStorage.setItem("user",  JSON.stringify(usuarioValidado))
     localStorage.setItem('usuarioLogueado', JSON.stringify('usuarioValido'));
     Swal.fire({
         toast: true,

@@ -1,7 +1,7 @@
 import {rolUser } from '../helpers/helpDB.js'; 
 import { deleteChildNode } from '../service/serviceAdministrador.js';
 import dataConf from "../db.json" assert {type:'json'};
-const events = JSON.parse(localStorage.getItem("listEvents")) || dataConf.charlas; 
+const events = JSON.parse(localStorage.getItem("charlaInfo")) || dataConf.charlas; 
 const user = JSON.parse(localStorage.getItem("listaUsuarios"))  || dataConf.usuarios; 
 function TitlePpal (text) {
     const title = document.createElement("h3"); 
@@ -164,7 +164,7 @@ function eliminarFila(tipe,id, file) {
                 }
                 return event; 
             });
-            localStorage.setItem("listEvents" , JSON.stringify(events)); 
+            localStorage.setItem("charlaInfo" , JSON.stringify(events)); 
         }
       file.remove();
       
