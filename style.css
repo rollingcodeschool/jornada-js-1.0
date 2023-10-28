@@ -6,12 +6,15 @@
 :root {
   --Font-: 'Roboto', sans-serif;
   /* Recordar 300, 400, 500 */
+  --White-: #FFFFFF;
+  --Persian-Red-: #D81D26;
+  --Dark-:#1A1A1A;
+  --Dark-Gray-: #2F2F2F;
+  --Light-Gray-: #535353;
   --Cinnabar-: #F05537;
   --Persian-Red-: #CF3C3A;
-  --AntiFlash-White-: #EBEBEB;
-  --Black-Olive-:#232E21;
-  --Polynesian-Blue-:#1F487E
 }
+
 .landingFirstImage{
   width: 400px;
 }
@@ -26,7 +29,7 @@
 }
 
 .navbar-total {
-  background-color: var(--Black-Olive-);
+  background-color: var(--Light-Gray-);
 } 
 
 .logo-navbar {
