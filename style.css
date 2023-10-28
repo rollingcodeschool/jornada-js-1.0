@@ -12,3 +12,24 @@
   --Black-Olive-:#232E21;
   --Polynesian-Blue-:#1F487E
 }
+
+.navbar-total {
+  background-color: var(--Black-Olive-);
+} 
+
+.logo-navbar {
+  width: 20%;
+  height: 20%;
+}
+
+#cuerpoFooter ul {
+  list-style: none;
+  padding-left: 0;
+  color: var(--AntiFlash-White-);
+  background-color: var();
+}
+#cuerpoFooter ul a {
+text-decoration: none;
+color: var(--AntiFlash-White-);
+}
+
