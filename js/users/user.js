@@ -9,7 +9,7 @@ sessionStorage.setItem("user","A@b.com")
 
     const usuario = obtenerContactosDeLS()
     
-    const usuarioEncontrado = usuario.find((item)=>{return item.email == email})
+    const usuarioEncontrado = usuario.find((item)=> {return item.email == email})
 
     const inputNombre = document.getElementById("--inputUser-Name")
     const inputEmail = document.getElementById("--inputUser-Email")
@@ -26,16 +26,18 @@ export const editarUsuario = (nombre,email) => {
     
     const posicionUsuario = usuario.findIndex((item)=>item.codigo === codigo)
 
-    const usuarioEditado = new Contacto (nombre,contrasenia,email)
+    const usuarioEditado = new Contacto (nombre,"",email)
 
     usuario.splice(posicionUsuario,1,usuarioEditado)
 
     localStorage.setItem("contactos",JSON.stringify(usuario))
 
+    usuarioPreparado();
+
     swal.fire({
         icon: "success",
         title: "Exito",
-        text: "La pelicula se editó correctamente",
+        text: "¡Usuario editado!",
         customClass: {
           popup: 'colored-toast'
         },
