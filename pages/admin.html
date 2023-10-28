@@ -87,7 +87,61 @@
       </nav>
     </header>
     <main>
-
+        <main class="container text-center">
+            <h1 class="text-white">Cargar Pelicula</h1>
+            <section>
+              <form class="row g-3 needs-validation text-white" novalidate id="formsChat">
+        
+                <fieldset class="col-md-4 position-relative">
+                  <label for="title" class="form-label fw-bolder">titulo de charla</label>
+                  <input type="text" class="form-control" id="title" placeholder=" Ingrese el titulo de la charla"
+                    required>
+                  <div class="invalid-tooltip">
+                    Ingresaste un titulo invalido!
+                </fieldset>
+    
+                <fieldset class="col-md-4 position-relative">
+                  <label for="hour" class="form-label fw-bolder">Portada de la charla</label>
+                  <input type="text" class="form-control" id="hour" placeholder="Ingresa la hora de la charla" required>
+                  <div class="invalid-tooltip">
+                    Ingresa la hora de la charla !
+                  </div>
+                </fieldset>
+                
+            
+                
+                <fieldset class="col-md-3 position-relative">
+                  <label for="speaker" class="form-label fw-bolder">Nombre del orador</label>
+                  <input type="text" class="form-control" id="speaker" placeholder="Ingresa el nombre del orador" required>
+                  <div class="invalid-tooltip">
+                    Debes ingresar el nombre del orador
+                  </div>
+                </fieldset>
+                <fieldset class="col-md-4 position-relative">
+                    <label for="image" class="form-label fw-bolder">portada de la ccharla</label>
+                    <input type="text" class="form-control" id="image" placeholder="Ingresa la portada" required>
+                    <div class="invalid-tooltip">
+                      Debes ingresar la Url de la img!
+                    </div>
+                </fieldset>
+                <div class="col-12 mt-5 mb-2">
+                  <button class="btn btn-primary" type="submit">Cargar charla</button>
+                </div>
+              </form>
+            </section>
+        
+            <section>
+              <input class="form-control me-2" id="buscarPelicula" type="search" placeholder="Search" aria-label="Search">
+            </section>
+        
+        
+            <section class="container row mt-5">
+              <article class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <article id="cardContainer"></article>
+                </table>
+              </article>
+        
+            </section>
     </main>
     <footer class="container-xl bg-dark">
       <div class="d-flex">
@@ -255,5 +309,6 @@
     src="https://kit.fontawesome.com/10942c11e8.js"
     crossorigin="anonymous"
   ></script>
+  <script type="module" src="../js/admin/app.js"/>
   </body>
 </html>
