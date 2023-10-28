@@ -10,11 +10,3 @@ export class User {
         this.contrasenia = contrasenia;
     }
 }
-
-export class UserWithoutContrasenia {
-    constructor(email, contrasenia){
-        this.id = generateRandomId();
-        this.email = email;
-        this.contrasenia = contrasenia;
-    }
-}

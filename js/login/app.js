@@ -1,7 +1,7 @@
 'use strict'
 
 import { validarContrasenia, validarEmail } from "../register/validators.js";
-import { User, UserWithoutContrasenia } from "./User.js";
+import { User } from "./User.js";
 
 
 const isLogged = JSON.parse(sessionStorage.getItem('isLogged'));
@@ -10,6 +10,7 @@ if (isLogged) {
 window.location.href = './admin/admin.html';
 }
 
+const users = JSON.parse(localStorage.getItem('contactos'));
 
 const adminUser = new User('admin@gmail.com', '12349');
 
@@ -20,28 +21,35 @@ const contraseniaInput = document.getElementById('contrasenia-login');
 const credentialsAlert = document.getElementById('credentials-alert');
 
 
-formLogin.addEventListener('submit', (e) => {  e.preventDefault();
+formLogin.addEventListener('submit', (e) => {  
+  e.preventDefault();
 
   const email = emailInput.value;
   const contrasenia = contraseniaInput.value;
 
-  if (
-    validarEmail(email, emailInput) &&
-    validarContrasenia(contrasenia, contraseniaInput)
-  ) {
+  console.log(email, contrasenia)
+
+  // const isEmail =  validarEmail(email, emailInput)
+  // const isContrasenia = validarContrasenia(contrasenia, contraseniaInput)
+
+  const user = users.find((item) => item.email === email)
+  
+  if (user) {
+    console.log(user)
+    
+    if(user.contrasenia === contrasenia){
 
     emailInput.classList.remove('is-invalid');
     contraseniaInput.classList.remove('is-invalid');
 
-    if (email === adminUser.email && contrasenia === adminUser.contrasenia) {
+    sessionStorage.setItem('isLogged', true);
+    sessionStorage.setItem('user', JSON.stringify(email));
+    
+    // if (email === adminUser.email) {
 
       credentialsAlert.classList.add('d-none');
 
-      const loggedUser = new UserWithoutContrasenia('admin@gmail.com');
-
-      sessionStorage.setItem('isLogged', true);
-      sessionStorage.setItem('user', JSON.stringify(loggedUser));
-
+    
       swal.fire({
         title: 'BIENVENIDO',
         timer: 2000,
@@ -56,8 +64,17 @@ formLogin.addEventListener('submit', (e) => {  e.preventDefault();
       .then(() => {
         window.location.href = '../../pages/home.html';
     });
-    } else {
-      credentialsAlert.classList.remove('d-none');
-    }
+    // } else {
+    //   credentialsAlert.classList.remove('d-none');
+    // }
+  } else {
+    alert('Usuario y contraseña no válidos.')
   }
+} else {
+credentialsAlert.classList.remove('d-none');
+alert('Usuario y contraseña no válidos.')
+}
+
 });
+
+
