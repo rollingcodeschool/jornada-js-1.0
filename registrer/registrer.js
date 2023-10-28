@@ -2,7 +2,7 @@ let getUser = JSON.parse(localStorage.getItem("user")) || []
 console.log(getUser);
 
 
-const sendLocal = (e) => {
+const sendLocal = () => {
 
 
     let usuario = document.getElementById("usuario")
@@ -28,7 +28,6 @@ const sendLocal = (e) => {
     let objetoRegistro = JSON.stringify(allUser);
     localStorage.setItem("user", objetoRegistro);
 
-
+    window.location.href = "../login/login.html";
 
 }
-

@@ -1,4 +1,4 @@
- :root {
+  :root {
     --color-white: #fff;
     --color-red: #d81d26;
     --color-black: #1a1a1a;
@@ -7,7 +7,13 @@
     --color-back-ground: #f3f3f3;
   }
 
-  .button-registrer{
+.register-form {
+    background-color: var( --color-back-ground);
+    max-width: 600px;
+    min-height: 400px;
+}
+
+.button-registrer{
     border: none;
     font-family: "Work Sans", Sans-serif;
     font-weight: 500;
@@ -21,16 +27,3 @@
     background-color: var(--color-red);
     color: #fff;
 }
-
-
-.login-form{
-    background-color: var( --color-back-ground);
-    min-width: 600px;
-    min-height: 400px;
-}
-  /*
-
-
-.button-registrer{
-    padding: 5px 30px;
-} */
