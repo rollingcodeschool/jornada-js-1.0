@@ -39,9 +39,20 @@ const renderInfoModal = (id) => {
   const modalTitle = document.querySelector(".modal-title");
   modalTitle.innerHTML = modalInfo.título;
   const modalfooter = document.querySelector(".modal-footer");
+  const modalbody = document.querySelector(".modal-body");
+  modalbody.innerHTML = `
+    <p>${modalInfo.descripción}</p>
+    <div class="oradorContainer">
+      <h6>${modalInfo.orador}</h6>
+    </div>
+  `
   modalfooter.innerHTML = `
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-    <button type="button" class="btn btn-primary" onclick="console.log(${id})">Agregar</button>
+    <p>Deseas registrarte a esta charla?</p>
+    <div>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+      <button type="button" class="btn btn-primary" onclick="console.log(${id})">Agregar</button>
+    </div>
+    
   `
 }
 

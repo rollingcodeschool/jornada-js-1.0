@@ -55,6 +55,16 @@ color: var(--AntiFlash-White-);
   border-radius: 5px 0xp 0xp 0px;
 }
 
+.oradorContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.modal-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
 .cardConfContainer {
   display: flex;
   border-radius: 5px;
