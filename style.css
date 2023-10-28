@@ -22,10 +22,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
   font-family: var(--Font-);
   padding: 20px;
+  margin: 70px 0px;
 }
 .bodyLandingPage{
   background-color: var(--AntiFlash-White-);
@@ -54,6 +53,16 @@ color: var(--AntiFlash-White-);
 .imgOrador{
   width: 200px;
   border-radius: 5px 0xp 0xp 0px;
+}
+
+.oradorContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.modal-footer {
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 .cardConfContainer {
@@ -105,6 +114,7 @@ color: var(--AntiFlash-White-);
   }
   .confInfo {
     padding: 0px 20px;
+    width: 100%;
   }
   .headerLandingPage {
     flex-wrap: wrap;
@@ -130,6 +140,7 @@ color: var(--AntiFlash-White-);
 @media (min-width: 1025px) {
   .cardConfContainer {
     padding: 20px;
+    justify-content: space-between;
   }
   .infoConfContainer {
     padding: 0px 200px;

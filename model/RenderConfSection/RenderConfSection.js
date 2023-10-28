@@ -20,6 +20,7 @@ class RenderConfSection {
       <h4>${this.orador}</h4>
     </div>
     <div class="confInfo">
+      <h3>${this.titulo}</h3>
       <p>${this.descripción}</p>
       <div class="spanContainer">
         <span class="spanHour">${this.hora}</span>
@@ -38,6 +39,13 @@ const renderInfoModal = (id) => {
   const modalTitle = document.querySelector(".modal-title");
   modalTitle.innerHTML = modalInfo.título;
   const modalfooter = document.querySelector(".modal-footer");
+  const modalbody = document.querySelector(".modal-body");
+  modalbody.innerHTML = `
+    <p>${modalInfo.descripción}</p>
+    <div class="oradorContainer">
+      <h6>${modalInfo.orador}</h6>
+    </div>
+  `
   modalfooter.innerHTML = `
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
   `; 
@@ -62,6 +70,7 @@ function agregarCharla (id){
   }else{
     alert("Debe Registrarse para inscribirse!");
   }
+
 }
 
 // const renderInfoModal = (id) => {

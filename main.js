@@ -32,7 +32,7 @@ loadInfoSection();
 // console.log(charlas);
 
 const renderInfoSection = () => {
-  charlas.splice(charlas.length-3).forEach(charla => {
+  charlas.forEach(charla => {
     charla.render(infoConfContainer)
   })
 }
