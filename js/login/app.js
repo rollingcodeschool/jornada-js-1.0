@@ -1,11 +1,8 @@
 'use strict'
 
-import { User, UserWithoutPassword } from './User.js';
-import { validatePassword, validateEmail } from '../validators.js';
+import { validarContrasenia, validarEmail } from "../register/validators.js";
+import { User, UserWithoutContrasenia } from "./User.js";
 
-// -----------------------------------------
-// 1. Proteger ruta
-// -----------------------------------------
 
 const isLogged = JSON.parse(sessionStorage.getItem('isLogged'));
 if (isLogged) {
@@ -13,62 +10,42 @@ if (isLogged) {
 window.location.href = './admin/admin.html';
 }
 
-// -----------------------------------------
-// 2. Crear usuario por defecto
-// -----------------------------------------
 
-const adminUser = new User('admin@gmail.com', 'admin');
+const adminUser = new User('admin@gmail.com', '12349');
 
-// -----------------------------------------
-// 3. Seleccionar elementos del DOM
-// -----------------------------------------
 
 const formLogin = document.getElementById('form-login');
 const emailInput = document.getElementById('email-login');
-const passwordInput = document.getElementById('password-login');
+const contraseniaInput = document.getElementById('contrasenia-login');
 const credentialsAlert = document.getElementById('credentials-alert');
 
-// -----------------------------------------
-// 4. Manejar el submit
-// -----------------------------------------
 
-formLogin.addEventListener('submit', (e) => {
-  // A. Prevenimos comportamiento por defecto
-  e.preventDefault();
+formLogin.addEventListener('submit', (e) => {  e.preventDefault();
 
-  // B. Leer valores de los campos
   const email = emailInput.value;
-  const password = passwordInput.value;
+  const contrasenia = contraseniaInput.value;
 
-  // C. Validar los campos (solo el contenido)
   if (
-    validateEmail(email, emailInput) &&
-    validatePassword(password, passwordInput)
+    validarEmail(email, emailInput) &&
+    validarContrasenia(contrasenia, contraseniaInput)
   ) {
-    // los campos estan OK pero no sabemos aun si son las credenciales
 
-    // i. Resetear las clases
     emailInput.classList.remove('is-invalid');
-    passwordInput.classList.remove('is-invalid');
+    contraseniaInput.classList.remove('is-invalid');
 
-    // ii. Validamos credenciales
-    if (email === adminUser.email && password === adminUser.password) {
+    if (email === adminUser.email && contrasenia === adminUser.contrasenia) {
 
-      // 1. Ocultar alert
       credentialsAlert.classList.add('d-none');
 
-      // 2. Crear usuario sin contraseña p/ guardarlo
-      const loggedUser = new UserWithoutPassword('admin@gmail.com');
+      const loggedUser = new UserWithoutContrasenia('admin@gmail.com');
 
-      // 3. Guardar estado
       sessionStorage.setItem('isLogged', true);
       sessionStorage.setItem('user', JSON.stringify(loggedUser));
 
-      // 4. Mensaje de exito
       swal.fire({
         title: 'BIENVENIDO',
-        timer: 1500,
-        imageUrl: 'https://i.postimg.cc/CLyTy7GJ/RC-ISO-2.png',
+        timer: 2000,
+        imageUrl: '../assets/logo-blanco.png',
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'foto bienvenida rolling code school',
@@ -77,11 +54,9 @@ formLogin.addEventListener('submit', (e) => {
         color: '#f9f9f9',
       })
       .then(() => {
-        // 5. Redireccion a admin
-        window.location.href = './admin/admin.html';
+        window.location.href = '../../index.html';
     });
     } else {
-      // Credenciales no validas
       credentialsAlert.classList.remove('d-none');
     }
   }
