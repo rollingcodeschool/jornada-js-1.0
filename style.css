@@ -38,10 +38,15 @@
   list-style: none;
   padding-left: 0;
   color: var(--AntiFlash-White-);
-  background-color: var();
+  background-color: var(--Black-Olive-)
 }
 #cuerpoFooter ul a {
 text-decoration: none;
 color: var(--AntiFlash-White-);
 }
+
+.fa-brands{
+  color: var(--Cinnabar-);
+}
+
 
