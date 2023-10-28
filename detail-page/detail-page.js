@@ -38,6 +38,12 @@ registrer.className = "button-registrer"
 registrer.innerText = "Registrarse"
 mainDeatil.append(registrer)
 
+let pathRoute = window.location.pathname
+console.log(pathRoute);
+
+
+
+
 
 
 
