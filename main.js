@@ -19,6 +19,7 @@ const getCharlas = async () => {
   return data;
 };
 
+
 document.querySelector("#btn-user").addEventListener("click", () => {
   getUsuarios().then((respuesta) => {
     console.log(respuesta);
