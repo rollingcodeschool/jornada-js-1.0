@@ -1,4 +1,17 @@
 import dataConf from "./db.json" assert {type:'json'};
+import myFooter from "./js/footer.js";
+import navbar from "./js/navBar.js";
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  navbar();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  myFooter();
+});
+
+console.log("Hola mundo");
 
 console.log(dataConf.charlas);
 
@@ -25,4 +38,11 @@ const renderInfoSection = () => {
 }
 
 renderInfoSection();
+
+document.querySelector("#btn-talks").addEventListener("click", () => {
+  getCharlas().then((respuesta) => {
+    console.log(respuesta);
+  });
+});
+
 
