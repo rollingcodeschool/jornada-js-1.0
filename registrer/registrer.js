@@ -1,8 +1,9 @@
-let getUser = JSON.parse(localStorage.getItem("user"))
+let getUser = JSON.parse(localStorage.getItem("user")) || []
 console.log(getUser);
 
 
-const sendLocal = () => {
+const sendLocal = (e) => {
+
 
     let usuario = document.getElementById("usuario")
     let email = document.getElementById("email")
@@ -18,13 +19,16 @@ const sendLocal = () => {
         password: passwordValor
     }
 
-    const allUser = [...getUser, user]
-    console.log(allUser);
+    if (!Array.isArray(getUser)) {
+        getUser = [];
+    }
+
+    const allUser = getUser.concat(user)
+
+    let objetoRegistro = JSON.stringify(allUser);
+    localStorage.setItem("user", objetoRegistro);
 
 
-/* 
-    var objetoRegistro = JSON.stringify(allUser);
-    localStorage.setItem("user", objetoRegistro); */
+
 }
-
 
