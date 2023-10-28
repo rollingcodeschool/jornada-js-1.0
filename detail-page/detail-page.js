@@ -21,8 +21,6 @@ imgDetail.innerHTML = `
 `
 mainDeatil.append(imgDetail)
 
-
-
 let timeSpeach = document.createElement("div")
 timeSpeach.className = "time-speach"
 timeSpeach.innerText = "Hora 20:00"
@@ -39,7 +37,6 @@ let registrer = document.createElement("button")
 registrer.className = "button-registrer"
 registrer.innerText = "Registrarse"
 mainDeatil.append(registrer)
-
 
 
 

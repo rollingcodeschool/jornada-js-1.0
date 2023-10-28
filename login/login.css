@@ -7,17 +7,10 @@
     --color-back-ground: #f3f3f3;
   }
 
-  main{
-    background-color: var(--color-back-ground);
-    text-align: center;
-  }
-
-  .description-container{
-    padding-bottom: 20px;
-  }
-
-.detail-img img{
-    max-width: 80%;
+.login-form{
+    background-color: var(--color-back-ground) ;
+    min-height: 300px;
+    max-width: 600px;
 }
 
 .button-registrer{
@@ -32,9 +25,9 @@
 
 .button-registrer:hover{
     background-color: var(--color-red);
+    color: #fff;
 }
 
 .button-registrer{
     padding: 5px 30px;
 }
-
