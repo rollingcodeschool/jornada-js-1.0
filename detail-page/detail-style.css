@@ -1,0 +1,36 @@
+:root {
+    --color-white: #fff;
+    --color-red: #d81d26;
+    --color-black: #1a1a1a;
+    --color-dark-gray: #2f2f2f;
+    --color-medium-gray: #535353;
+    --color-back-ground: #f3f3f3;
+  }
+
+  main{
+    background-color: var(--color-back-ground);
+    text-align: center;
+  }
+
+.detail-img img{
+    max-width: 80%;
+}
+
+.button-registrer{
+    border: none;
+    font-family: "Work Sans", Sans-serif;
+    font-weight: 500;
+    fill: #C10000;
+    color: #C10000;
+    background-color: #FFFFFF;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.button-registrer:hover{
+    background-color: var(--color-red);
+}
+
+.button-registrer{
+    padding: 5px 30px;
+}
+
