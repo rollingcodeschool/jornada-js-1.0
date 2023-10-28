@@ -152,6 +152,11 @@ color: var(--AntiFlash-White-);
   background-color: #09090a;
 }
 
+#navBarPrincipal {
+  background-color: #535353;
+}
+
+
 .redes-sociales {
   font-size: 2rem;
   background-color: #18191f;
