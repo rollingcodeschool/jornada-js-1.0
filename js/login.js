@@ -65,6 +65,24 @@ formulario.addEventListener('submit', (e) => {
         return;
     }
 
+    if (email === "speaker@speaker.com" && password === "speaker") {
+        localStorage.setItem('speakerLogueado', true);
+        Swal.fire({
+            toast: true,
+            icon: "success",
+            color: "white",
+            background: "green",
+            title: "Bienvenido!",
+            position: "bottom-start",
+            showConfirmButton: false,
+            timer: 3000,
+        });
+        let interval = setInterval(() => {
+            window.location.href = '../index.html'
+        }, 2000)
+        return;
+    }
+
     const usuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
 
     const usuarioValido = usuarios.find(usuario => usuario.email === email && usuario.password === password);
