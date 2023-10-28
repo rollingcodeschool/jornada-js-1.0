@@ -1,32 +1,28 @@
-console.log("Hola mundo");
+import dataConf from "./db.json" assert {type:'json'};
 
-let url = "http://localhost:3000";
+console.log(dataConf.charlas);
 
-//traer usuarios de la BD
+//Variables 
+const infoConfContainer = document.querySelector('.infoConfContainer');
+let charlas = [];
 
-const getUsuarios = async () => {
-  const resp = await fetch(url + "/" + "usuarios");
-  const data = await resp.json();
-
-  return data;
-};
-
-//Traer las charlas
-const getCharlas = async () => {
-  const resp = await fetch(url + "/" + "charlas");
-  const data = await resp.json();
-
-  return data;
-};
-
-document.querySelector("#btn-user").addEventListener("click", () => {
-  getUsuarios().then((respuesta) => {
-    console.log(respuesta);
+//Instancias
+const loadInfoSection = () => {
+  charlas = [];
+  dataConf.charlas.forEach(element => {
+    charlas.push(new RenderConfSection(element.imagen, element.orador, element.título, element.hora, element.descripción))
   });
-});
+}
 
-document.querySelector("#btn-talks").addEventListener("click", () => {
-  getCharlas().then((respuesta) => {
-    console.log(respuesta);
-  });
-});
+loadInfoSection();
+
+console.log(charlas);
+
+const renderInfoSection = () => {
+  charlas.splice(charlas.length-3).forEach(charla => {
+    charla.render(infoConfContainer)
+  })
+}
+
+renderInfoSection();
+

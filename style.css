@@ -12,3 +12,15 @@
   --Black-Olive-:#232E21;
   --Polynesian-Blue-:#1F487E
 }
+.landingFirstImage{
+  width: 400px;
+}
+.headerLandingPage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: var(--Font-);
+}
+.bodyLandingPage{
+  background-color: var(--AntiFlash-White-);
+}
